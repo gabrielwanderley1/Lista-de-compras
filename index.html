@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras Pessoais</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛒 Lista de Compras Pessoais</h1>
+            <p>Organize seus produtos e links de compra</p>
+        </div>
+        
+        <div class="content">
+            <div class="add-card-section">
+                <button class="btn btn-primary add-card-btn" onclick="addNewCard()">
+                    ➕ Adicionar Novo Item
+                </button>
+            </div>
+            <div class="items-grid">
+                <!-- Item 1: Fone de Ouvido -->
+                <div class="item-card">
+                    <button class="delete-card-btn" onclick="deleteCard(this)" title="Excluir item">×</button>
+                    <h2 class="item-title">Fone de Ouvido</h2>
+                    <div class="item-image">
+                        <img src="" alt="Imagem do produto" class="product-image" style="display: none;">
+                        <div class="image-placeholder">
+                            <button class="btn btn-secondary image-upload-btn" onclick="triggerImageUpload(this)">
+                                📷 Adicionar Imagem
+                            </button>
+                            <button class="btn btn-secondary image-url-btn" onclick="showImageUrlInput(this)">
+                                🔗 URL da Imagem
+                            </button>
+                        </div>
+                        <input type="file" class="image-input" accept="image/*" onchange="handleImageUpload(this)" style="display: none;">
+                    </div>
+                    <div class="links-section">
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary add-link-btn" onclick="addLink(this)">
+                        ➕ Adicionar Novo Link
+                    </button>
+                </div>
+
+                <!-- Item 2: Escova de Dente Elétrica -->
+                <div class="item-card">
+                    <button class="delete-card-btn" onclick="deleteCard(this)" title="Excluir item">×</button>
+                    <h2 class="item-title">Escova de Dente Elétrica</h2>
+                    <div class="item-image">
+                        <img src="" alt="Imagem do produto" class="product-image" style="display: none;">
+                        <div class="image-placeholder">
+                            <button class="btn btn-secondary image-upload-btn" onclick="triggerImageUpload(this)">
+                                📷 Adicionar Imagem
+                            </button>
+                            <button class="btn btn-secondary image-url-btn" onclick="showImageUrlInput(this)">
+                                🔗 URL da Imagem
+                            </button>
+                        </div>
+                        <input type="file" class="image-input" accept="image/*" onchange="handleImageUpload(this)" style="display: none;">
+                    </div>
+                    <div class="links-section">
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary add-link-btn" onclick="addLink(this)">
+                        ➕ Adicionar Novo Link
+                    </button>
+                </div>
+
+                <!-- Item 3: Smartphone -->
+                <div class="item-card">
+                    <button class="delete-card-btn" onclick="deleteCard(this)" title="Excluir item">×</button>
+                    <h2 class="item-title">Smartphone</h2>
+                    <div class="item-image">
+                        <img src="" alt="Imagem do produto" class="product-image" style="display: none;">
+                        <div class="image-placeholder">
+                            <button class="btn btn-secondary image-upload-btn" onclick="triggerImageUpload(this)">
+                                📷 Adicionar Imagem
+                            </button>
+                            <button class="btn btn-secondary image-url-btn" onclick="showImageUrlInput(this)">
+                                🔗 URL da Imagem
+                            </button>
+                        </div>
+                        <input type="file" class="image-input" accept="image/*" onchange="handleImageUpload(this)" style="display: none;">
+                    </div>
+                    <div class="links-section">
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary add-link-btn" onclick="addLink(this)">
+                        ➕ Adicionar Novo Link
+                    </button>
+                </div>
+
+                <!-- Item 4: Notebook -->
+                <div class="item-card">
+                    <button class="delete-card-btn" onclick="deleteCard(this)" title="Excluir item">×</button>
+                    <h2 class="item-title">Notebook</h2>
+                    <div class="item-image">
+                        <img src="" alt="Imagem do produto" class="product-image" style="display: none;">
+                        <div class="image-placeholder">
+                            <button class="btn btn-secondary image-upload-btn" onclick="triggerImageUpload(this)">
+                                📷 Adicionar Imagem
+                            </button>
+                            <button class="btn btn-secondary image-url-btn" onclick="showImageUrlInput(this)">
+                                🔗 URL da Imagem
+                            </button>
+                        </div>
+                        <input type="file" class="image-input" accept="image/*" onchange="handleImageUpload(this)" style="display: none;">
+                    </div>
+                    <div class="links-section">
+                        <div class="link-group">
+                            <input type="url" class="link-input" placeholder="Cole aqui o link do produto...">
+                            <button class="btn remove-btn" onclick="removeLink(this)">×</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary add-link-btn" onclick="addLink(this)">
+                        ➕ Adicionar Novo Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para adicionar novo item -->
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛍️ Adicionar Novo Item</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <label for="itemNameInput">Nome do item:</label>
+                <input type="text" id="itemNameInput" placeholder="Ex: Fone de Ouvido, Smartphone..." maxlength="50">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+                <button class="btn btn-primary" onclick="confirmAddItem()">Adicionar Item</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 
